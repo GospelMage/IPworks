@@ -13,14 +13,11 @@
 
     <!-- Navigation -->
     <nav>
-        <a href="index.html" class="footer-logo">
-    <span class="logo-diamond"></span> 
-    IP Botswana <span>Vanguard</span>
-</a>
-        <!-- Note: Menu Toggle Button placeholder for future mobile menu -->
+        <a href="index.html" class="logo">IP Botswana <span>Vanguard</span></a>
         <div class="nav-links">
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
+            <a href="ecosystem.html">Ecosystem</a>
             <a href="how-it-works.html">How It Works</a>
             <a href="community.html">Community</a>
             <a href="faq.html">FAQ</a>
@@ -78,8 +75,11 @@
                 <!-- Play Button -->
                 <div class="play-overlay"></div>
                 
-                <!-- Bottom Video Callout -->
-                <div class="video-badge">
+            </div>
+
+            <!-- Bottom Video Callout (Centered below visual) -->
+            <div style="text-align: center; width: 100%; margin-top: -30px; margin-bottom: 20px;">
+                <div class="video-badge" style="display: inline-block;">
                     Watch the 1-min intro
                 </div>
             </div>
@@ -87,11 +87,25 @@
         </div>
     </section>
 
-            <!-- FOOTER -->
+    <!-- VIDEO POPUP MODAL -->
+    <!-- IMPORTANT: Change "YOUR_YOUTUBE_ID_HERE" to your real video ID (e.g., dQw4w9WgXcQ) -->
+    <div id="videoModal" class="video-modal">
+        <span class="video-close">&times;</span>
+        <iframe id="videoFrame" 
+                src="https://www.youtube.com/embed/YOUR_YOUTUBE_ID_HERE?rel=0" 
+                allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- FOOTER -->
     <footer>
         <div class="footer-container">
+            <!-- Column 1: Brand & App Download -->
             <div class="footer-col">
-                <a href="index.html" class="footer-logo">IP Botswana <span>Vanguard</span></a>
+                <a href="index.html" class="footer-logo">
+                    <span class="logo-diamond"></span> 
+                    IP Botswana <span class="gold">Vanguard</span>
+                </a>
                 <p>Join the mobile mining revolution. Learn, mine, and grow in a safe, community-driven ecosystem built for Botswana.</p>
                 
                 <div class="app-buttons">
@@ -120,6 +134,7 @@
                 </div>
             </div>
 
+            <!-- Column 2: Quick Links -->
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <a href="index.html">Home</a>
@@ -128,6 +143,7 @@
                 <a href="ecosystem.html">Ecosystem</a>
             </div>
 
+            <!-- Column 3: Community -->
             <div class="footer-col">
                 <h4>Community</h4>
                 <a href="community.html">Our Hubs</a>
@@ -136,14 +152,28 @@
                 <a href="contact.html">Support</a>
             </div>
 
+            <!-- Column 4: Contact Info (With Icons Restored) -->
             <div class="footer-col">
                 <h4>Get in Touch</h4>
-                <p style="margin-bottom: 5px;">📧 support@ipbotswanavanguard.com</p>
-                <p style="margin-bottom: 5px;">📞 +267 1234 5678</p>
-                <p>📍 Gaborone, Botswana</p>
+                
+                <div class="contact-row">
+                    <span class="contact-icon">📧</span>
+                    <span>support@ipbotswanavanguard.com</span>
+                </div>
+                
+                <div class="contact-row">
+                    <span class="contact-icon">📞</span>
+                    <span>+267 1234 5678</span>
+                </div>
+                
+                <div class="contact-row">
+                    <span class="contact-icon">📍</span>
+                    <span>Gaborone, Botswana</span>
+                </div>
             </div>
         </div>
 
+        <!-- Footer Bottom -->
         <div class="footer-bottom">
             <div>&copy; 2026 IP Botswana Vanguard. All rights reserved.</div>
             <div class="footer-bottom-links">
@@ -152,12 +182,8 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- LINK TO EXTERNAL JAVASCRIPT FILE -->
-    <script src="script.js"></script>
-</body>
-</html>
-    <!-- LINK TO EXTERNAL JAVASCRIPT FILE (Must be at the bottom of body) -->
     <script src="script.js"></script>
 </body>
 </html>
