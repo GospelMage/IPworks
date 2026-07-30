@@ -334,20 +334,18 @@ h1 span {
 
 /* --- FOOTER STYLES --- */
 footer {
-    background: #3b2b5c; /* Fallback purple */
+    background: #3b2b5c; /* Your purple color */
     color: #d9d5e8;
-    padding: 60px 40px 30px 40px;
+    padding: 60px 20px 30px 20px;
     margin-top: 60px;
-    position: relative;
-    z-index: 10;
     width: 100%;
 }
 
 .footer-container {
-    max-width: 1200px;
+    max-width: 1200px; /* Keeps it neat on huge screens */
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr); /* 4 EQUAL columns! */
     gap: 40px;
     margin-bottom: 40px;
 }
@@ -369,7 +367,7 @@ footer {
     transition: color 0.3s ease;
 }
 .footer-col a:hover {
-    color: #f5b027;
+    color: #f5b027; /* Gold hover effect */
 }
 .footer-logo {
     font-weight: 800;
@@ -400,16 +398,16 @@ footer {
     text-decoration: none;
     border: 1px solid #333;
     transition: transform 0.2s ease, background 0.3s ease;
-    min-width: 150px;
+    min-width: 140px;
 }
 .app-btn:hover {
     transform: translateY(-3px);
     background: #1a1a1a;
 }
 .app-btn svg {
-    width: 30px;
-    height: 30px;
-    margin-right: 12px;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
     fill: #ffffff;
 }
 .app-btn-text {
@@ -424,7 +422,7 @@ footer {
     opacity: 0.8;
 }
 .app-btn-text span:last-child {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
@@ -454,19 +452,18 @@ footer {
 /* --- Footer Mobile Responsive --- */
 @media (max-width: 900px) {
     .footer-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
     }
 }
 @media (max-width: 600px) {
     .footer-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* 1 column on phones */
         gap: 30px;
     }
     footer { padding: 40px 20px 20px 20px; }
     .footer-bottom { flex-direction: column; text-align: center; }
     .footer-bottom-links a { margin: 0 10px; }
-}
-    
+}  
 
     /* --- VIDEO LIGHTBOX POPUP --- */
 .video-modal {
