@@ -369,16 +369,42 @@ footer {
 .footer-col a:hover {
     color: #f5b027; /* Gold hover effect */
 }
+/* --- Footer Logo --- */
 .footer-logo {
     font-weight: 800;
     font-size: 1.5rem;
     color: #ffffff;
     text-decoration: none;
     margin-bottom: 15px;
-    display: inline-block;
+    display: flex; /* Changed to flex to align icon and text */
+    align-items: center;
+    gap: 12px; /* Space between diamond and text */
 }
-.footer-logo span {
+.footer-logo span.gold {
     color: #f5b027;
+}
+
+/* Pure CSS Diamond Logo */
+.logo-diamond {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #f5b027 0%, #f5b027 25%, #cba11c 50%, #f5b027 75%, #f5b027 100%); /* Gold gradient */
+    transform: rotate(45deg); /* Turns the square into a diamond */
+    border-radius: 4px; /* Slight rounded corners to make it look softer */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: relative;
+}
+/* Adds a tiny white highlight inside the diamond */
+.logo-diamond::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 30%;
+    height: 30%;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
 }
 
 /* App Store Buttons */
