@@ -505,8 +505,23 @@ footer {
     h1 { font-size: 2.5rem; }
     .hero-visual { width: 100%; min-height: 350px; }
     .phone-mockup { width: 200px; height: 350px; }
-    nav { flex-direction: column; gap: 15px; text-align: center; }
-    .nav-links { flex-wrap: wrap; justify-content: center; gap: 10px; }
+    
+    /* FIXED NAVIGATION FOR MOBILE */
+    nav { 
+        flex-direction: row; /* Keeps logo and links in a row */
+        flex-wrap: wrap;     /* Allows links to drop to the next line if needed */
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px; 
+        gap: 10px;
+    }
+    .nav-links { 
+        flex-wrap: wrap; 
+        justify-content: flex-end; /* Aligns links to the right on tablets */
+        gap: 10px 15px; 
+        width: 100%; /* Forces links to sit on their own full-width row below logo */
+    }
+
     .trust-links { justify-content: center; }
     .video-modal iframe { width: 95%; height: 250px; }
     .video-close { top: 15px; right: 20px; font-size: 40px; }
