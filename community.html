@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Botswana Vanguard - Community</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- LINK TO EXTERNAL CSS FILE -->
+    <link rel="stylesheet" href="assets/style.css">
+    
+    <!-- ADDITIONAL CSS SPECIFIC TO THE COMMUNITY PAGE -->
+    <style>
+        /* --- Page Container --- */
+        .page-container {
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- Header --- */
+        .community-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .community-header h2 {
+            font-size: 3rem;
+            color: var(--primary-purple);
+            margin-bottom: 15px;
+        }
+        .community-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* --- Stats Banner --- */
+        .stats-banner {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background: var(--white);
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 60px;
+        }
+        .stat-box {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+            padding: 10px;
+        }
+        .stat-box h3 {
+            font-size: 2.8rem;
+            color: var(--accent-gold);
+            margin-bottom: 5px;
+        }
+        .stat-box p {
+            color: var(--primary-purple);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* --- Hubs Grid --- */
+        .hubs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .hub-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+        .hub-card:hover {
+            transform: translateY(-5px);
+        }
+        .hub-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+        .hub-card h3 {
+            color: var(--primary-purple);
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        .hub-card p {
+            color: #777;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+        .hub-tag {
+            display: inline-block;
+            background: rgba(245, 176, 39, 0.1);
+            color: var(--accent-gold);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        /* --- Testimonial Section --- */
+        .testimonial-section {
+            background: var(--primary-purple);
+            color: white;
+            padding: 60px;
+            border-radius: 30px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .testimonial-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--accent-gold);
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: left;
+        }
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(4px);
+        }
+        .testimonial-card p {
+            font-style: italic;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .testimonial-card .author {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+        }
+        .testimonial-card .location {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        /* --- Mobile Adjustments --- */
+        @media (max-width: 800px) {
+            .page-container { padding: 40px 20px; }
+            .community-header h2 { font-size: 2.2rem; }
+            .stats-banner { flex-direction: column; gap: 20px; padding: 30px 15px; }
+            .testimonial-section { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">IP Botswana <span>Vanguard</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="ecosystem.html">Ecosystem</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="community.html" class="active">Community</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Community Content -->
+    <div class="page-container">
+
+        <!-- Header -->
+        <div class="community-header">
+            <h2>Welcome to the Vanguard</h2>
+            <p>We are not just an app; we are a movement. Real people coming together across Botswana to learn, mine, and build a digital future safely.</p>
+        </div>
+
+        <!-- Stats Banner -->
+        <div class="stats-banner">
+            <div class="stat-box">
+                <h3>2,400+</h3>
+                <p>Active Members</p>
+            </div>
+            <div class="stat-box">
+                <h3>15</h3>
+                <p>Local Communities</p>
+            </div>
+            <div class="stat-box">
+                <h3>4.9</h3>
+                <p>Community Rating</p>
+            </div>
+            <div class="stat-box">
+                <h3>25+</h3>
+                <p>Events Hosted</p>
+            </div>
+        </div>
+
+        <!-- Community Hubs Grid -->
+        <div class="hubs-grid">
+            
+            <!-- Hub 1 -->
+            <div class="hub-card">
+                <!-- IMAGE TO REPLACE: Photo of a Gaborone meetup or group -->
+                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&h=400&fit=crop" alt="Gaborone Hub">
+                <h3>Gaborone Hub</h3>
+                <p>Our flagship community hub meeting weekly for workshops and mining sessions.</p>
+                <span class="hub-tag">60 Members</span>
+            </div>
+
+            <!-- Hub 2 -->
+            <div class="hub-card">
+                <!-- IMAGE TO REPLACE: Photo of a Francistown gathering -->
+                <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=600&h=400&fit=crop" alt="Francistown Group">
+                <h3>Francistown Group</h3>
+                <p>A rapidly growing community focusing on education and local peer-to-peer support.</p>
+                <span class="hub-tag">40 Members</span>
+            </div>
+
+            <!-- Hub 3 -->
+            <div class="hub-card">
+                <!-- IMAGE TO REPLACE: Photo of a digital/online meetup or people on laptops -->
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop" alt="Digital Discord">
+                <h3>Online Discord</h3>
+                <p>Connect with the broader Botswana network, ask questions, and access tutorials 24/7.</p>
+                <span class="hub-tag">2,300+ Members</span>
+            </div>
+
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="testimonial-section">
+            <h3>💬 What our members are saying</h3>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"I was scared of crypto before I found Vanguard. The community here taught me everything, and now I check my mining app every day."</p>
+                    <div class="author">— Keabetswe M.</div>
+                    <div class="location">Gaborone</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"It's not just about the money; it's about learning a new skill with a group of people who actually want to help you succeed."</p>
+                    <div class="author">— Thabo R.</div>
+                    <div class="location">Francistown</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The learning hub made blockchain accessible to me. I went from knowing zero to explaining it to my friends in two weeks!"</p>
+                    <div class="author">— Onalenna S.</div>
+                    <div class="location">Online</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- LINK TO EXTERNAL JAVASCRIPT FILE -->
+    <script src="assets/script.js"></script>
+</body>
+</html>

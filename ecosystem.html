@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Botswana Vanguard - Ecosystem</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- LINK TO EXTERNAL CSS FILE -->
+    <link rel="stylesheet" href="assets/style.css">
+    
+    <!-- ADDITIONAL CSS SPECIFIC TO THE ECOSYSTEM PAGE -->
+    <style>
+        /* --- Page Container --- */
+        .page-container {
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- Header --- */
+        .eco-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .eco-header h2 {
+            font-size: 3rem;
+            color: var(--primary-purple);
+            margin-bottom: 15px;
+        }
+        .eco-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* --- Ecosystem Grid --- */
+        .eco-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        .eco-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
+        .eco-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .eco-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        .eco-card h3 {
+            color: var(--primary-purple);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        .eco-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* --- Stats Bar --- */
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background: var(--white);
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-top: 20px;
+        }
+        .stat-item {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+            margin: 10px 0;
+        }
+        .stat-item h4 {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 5px;
+        }
+        .stat-item p {
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* --- Mobile Adjustments --- */
+        @media (max-width: 800px) {
+            .page-container { padding: 40px 20px; }
+            .eco-header h2 { font-size: 2.2rem; }
+            .stats-bar { flex-direction: column; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation (Updated to highlight Ecosystem instead of How It Works) -->
+    <nav>
+        <a href="index.html" class="logo">IP Botswana <span>Vanguard</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="ecosystem.html" class="active">Ecosystem</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="community.html">Community</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Ecosystem Content -->
+    <div class="page-container">
+
+        <!-- Header -->
+        <div class="eco-header">
+            <h2>Explore the Vanguard Ecosystem</h2>
+            <p>More than just an app. We are building a complete infrastructure for accessible, secure, and community-driven digital currency in Botswana.</p>
+        </div>
+
+        <!-- Grid of Ecosystem Features -->
+        <div class="eco-grid">
+            
+            <!-- Card 1: The App -->
+            <div class="eco-card">
+                <!-- IMAGE TO REPLACE: Put a screenshot of your app or someone holding a phone here -->
+                <img src="https://images.unsplash.com/photo-1512428559087-560fa5ce7f01?w=600&h=400&fit=crop" alt="Vanguard Mobile App">
+                <h3>📱 The Mobile App</h3>
+                <p>Our flagship mobile application allows you to learn, mine, and track your digital assets safely from your phone. Lightweight, energy-efficient, and designed for everyday use.</p>
+            </div>
+
+            <!-- Card 2: The Network -->
+            <div class="eco-card">
+                <!-- IMAGE TO REPLACE: Put a photo of people meeting or a globe/network graphic here -->
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop" alt="Vanguard Community Network">
+                <h3>🌍 The Community Network</h3>
+                <p>Connecting miners across Botswana. Join local hubs, attend meetups, and share knowledge with a network of peers who are as curious and committed as you are.</p>
+            </div>
+
+            <!-- Card 3: Education -->
+            <div class="eco-card">
+                <!-- IMAGE TO REPLACE: Put a photo of a classroom, workshop, or mentor session here -->
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop" alt="Vanguard Learning Hub">
+                <h3>📚 The Learning Hub</h3>
+                <p>Education is at the heart of our ecosystem. From beginner guides to advanced blockchain concepts, our library ensures you never feel lost in the digital world.</p>
+            </div>
+
+        </div>
+
+        <!-- Global Impact Stats -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <h4>15+</h4>
+                <p>Local Communities</p>
+            </div>
+            <div class="stat-item">
+                <h4>2.4k</h4>
+                <p>Active Miners</p>
+            </div>
+            <div class="stat-item">
+                <h4>0.03</h4>
+                <p>kWh/Day Energy Cost</p>
+            </div>
+            <div class="stat-item">
+                <h4>100%</h4>
+                <p>Focus on Safety</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- LINK TO EXTERNAL JAVASCRIPT FILE -->
+    <script src="assets/script.js"></script>
+</body>
+</html>

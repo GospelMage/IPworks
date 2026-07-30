@@ -1,0 +1,380 @@
+/* --- VARIABLES --- */
+:root {
+    --primary-purple: #3b2b5c;
+    --accent-gold: #f5b027;
+    --soft-bg: #f5f3f9;
+    --text-dark: #1a1a1a;
+    --white: #ffffff;
+}
+
+/* --- RESET & BASE STYLES --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Inter', sans-serif; 
+}
+body { 
+    background-color: var(--soft-bg); 
+    color: var(--text-dark); 
+}
+
+/* --- NAVIGATION --- */
+nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px 40px; 
+    background: #fff; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky; 
+    top: 0; 
+    z-index: 100;
+}
+.logo { 
+    font-weight: 800; 
+    font-size: 1.2rem; 
+    color: var(--primary-purple); 
+    text-decoration: none; 
+}
+.logo span { 
+    color: var(--accent-gold); 
+}
+.nav-links { 
+    display: flex; 
+    gap: 30px; 
+}
+.nav-links a {
+    text-decoration: none; 
+    color: #666; 
+    font-weight: 500; 
+    font-size: 0.95rem;
+}
+.nav-links a.active { 
+    color: var(--primary-purple); 
+    border-bottom: 2px solid var(--accent-gold); 
+    padding-bottom: 5px; 
+}
+
+/* --- HERO LAYOUT (HOME PAGE) --- */
+.hero {
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center;
+    padding: 80px 40px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    gap: 50px;
+}
+.split-layout { 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    gap: 50px; 
+    width: 100%; 
+}
+.split-layout > * { 
+    flex: 1; 
+    min-width: 300px; 
+}
+
+/* --- LEFT CONTENT --- */
+.tagline {
+    display: inline-block; 
+    background: rgba(245, 176, 39, 0.1); 
+    color: var(--accent-gold);
+    padding: 8px 16px; 
+    border-radius: 20px; 
+    font-size: 0.8rem; 
+    font-weight: 700; 
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+    margin-bottom: 20px;
+}
+h1 { 
+    font-size: 3.5rem; 
+    line-height: 1.1; 
+    color: var(--primary-purple); 
+    margin-bottom: 15px; 
+}
+h1 span { 
+    color: var(--accent-gold); 
+}
+.sub-headline { 
+    font-size: 1.1rem; 
+    color: #555; 
+    line-height: 1.6; 
+    margin-bottom: 25px; 
+    max-width: 500px; 
+}
+
+/* Social Proof */
+.social-proof { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    margin-bottom: 30px; 
+    font-size: 0.9rem; 
+    color: var(--primary-purple); 
+    font-weight: 600; 
+}
+.avatar-stack { 
+    display: flex; 
+}
+.avatar-stack img { 
+    width: 35px; 
+    height: 35px; 
+    border-radius: 50%; 
+    border: 2px solid #fff; 
+    margin-right: -12px; 
+    object-fit: cover; 
+}
+
+/* Buttons */
+.cta-group { 
+    display: flex; 
+    gap: 15px; 
+    flex-wrap: wrap; 
+    margin-bottom: 30px; 
+}
+.btn-primary {
+    background: var(--accent-gold); 
+    color: var(--primary-purple); 
+    padding: 15px 40px;
+    border-radius: 30px; 
+    font-weight: 700; 
+    border: none; 
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(245, 176, 39, 0.4); 
+    transition: 0.3s; 
+    text-decoration: none; 
+    display: inline-block;
+}
+.btn-primary:hover { 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 20px rgba(245, 176, 39, 0.6); 
+}
+.btn-secondary {
+    background: transparent; 
+    color: var(--primary-purple); 
+    padding: 15px 30px;
+    border-radius: 30px; 
+    font-weight: 600; 
+    border: 1px solid #ddd; 
+    cursor: pointer; 
+    transition: 0.3s;
+}
+.btn-secondary:hover { 
+    border-color: var(--primary-purple); 
+    background: rgba(59, 43, 92, 0.05); 
+}
+
+/* Trust Links (Below buttons) */
+.trust-links { 
+    display: flex; 
+    gap: 25px; 
+    font-size: 0.85rem; 
+    color: #666; 
+    flex-wrap: wrap; 
+}
+.trust-links span { 
+    display: flex; 
+    align-items: center; 
+    gap: 6px; 
+}
+
+/* --- RIGHT VISUAL (PHONE & BACKGROUND) --- */
+.hero-visual {
+    position: relative; 
+    min-height: 450px; 
+    border-radius: 30px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+    /* IMAGE TO REPLACE: Background photo URL goes here in your HTML */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+/* Blur & Overlay */
+.hero-visual::before { 
+    content: ''; 
+    position: absolute; 
+    inset: 0; 
+    background: rgba(245, 243, 249, 0.7); 
+    backdrop-filter: blur(4px); 
+    border-radius: 30px; 
+}
+
+/* Floating Phone Mockup */
+.phone-mockup {
+    position: relative; 
+    z-index: 2; 
+    background: #fff; 
+    width: 240px; 
+    height: 420px;
+    border-radius: 40px; 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2); 
+    padding: 20px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    border: 8px solid #f0f0f0;
+}
+.phone-mockup .app-title { 
+    color: #f5b027; 
+    font-size: 0.7rem; 
+    font-weight: 700; 
+    letter-spacing: 1px; 
+    margin-bottom: 15px; 
+}
+.phone-mockup .value { 
+    font-size: 3.5rem; 
+    color: var(--primary-purple); 
+    font-weight: 800; 
+}
+.phone-mockup .value span { 
+    font-size: 1.5rem; 
+    font-weight: 400; 
+    color: #888; 
+}
+.phone-mockup .sub-value { 
+    font-size: 0.85rem; 
+    color: #666; 
+    background: #f5f3f9; 
+    padding: 8px 15px; 
+    border-radius: 20px; 
+    margin-top: 15px; 
+}
+.phone-mockup .mockup-text { 
+    margin-top: 20px; 
+    font-size: 0.8rem; 
+    color: #999; 
+}
+
+/* Play Button Overlay */
+.play-overlay {
+    position: absolute; 
+    z-index: 3; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background: rgba(255,255,255,0.95);
+    width: 70px; 
+    height: 70px; 
+    border-radius: 50%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.play-overlay:hover { 
+    transform: translate(-50%, -50%) scale(1.05); 
+}
+.play-overlay::after {
+    content: ''; 
+    display: block;
+    border-top: 12px solid transparent; 
+    border-bottom: 12px solid transparent;
+    border-left: 18px solid var(--primary-purple); 
+    margin-left: 6px;
+}
+
+/* Bottom Video Callout */
+.video-badge {
+    position: absolute; 
+    bottom: 30px; 
+    background: var(--primary-purple); 
+    color: white; 
+    padding: 12px 25px; 
+    border-radius: 30px; 
+    font-size: 0.85rem; 
+    font-weight: 600; 
+    z-index: 3; 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 800px) {
+    .hero { 
+        flex-direction: column-reverse; 
+        padding: 40px 20px; 
+        gap: 30px; 
+    }
+    h1 { 
+        font-size: 2.5rem; 
+    }
+    .hero-visual { 
+        width: 100%; 
+        min-height: 350px; 
+    }
+    .phone-mockup { 
+        width: 200px; 
+        height: 350px; 
+    }
+    nav { 
+        flex-direction: column; 
+        gap: 15px; 
+        text-align: center; 
+    }
+    .nav-links { 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 10px; 
+    }
+    .trust-links { 
+        justify-content: center; 
+    }
+
+    /* --- VIDEO LIGHTBOX POPUP --- */
+.video-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 9999;
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Slight blur behind video */
+}
+.video-modal.active {
+    display: flex; /* Shows the modal when active */
+}
+.video-modal iframe {
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    background: #000;
+}
+.video-close {
+    position: absolute;
+    top: 30px; 
+    right: 40px;
+    color: #fff;
+    font-size: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+.video-close:hover {
+    color: var(--accent-gold); /* Your gold color on hover */
+}
+
+/* Responsive adjustments for mobile phones */
+@media (max-width: 800px) {
+    .video-modal iframe { width: 95%; height: 250px; }
+    .video-close { top: 15px; right: 20px; font-size: 40px; }
+}
+}

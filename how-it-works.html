@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Botswana Vanguard - How It Works</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- LINK TO EXTERNAL CSS FILE -->
+    <link rel="stylesheet" href="assets/style.css">
+    
+    <!-- ADDITIONAL CSS SPECIFIC TO THE HOW IT WORKS PAGE -->
+    <style>
+        /* --- Page Container --- */
+        .page-container {
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- Header --- */
+        .hiw-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .hiw-header h2 {
+            font-size: 3rem;
+            color: var(--primary-purple);
+            margin-bottom: 15px;
+        }
+        .hiw-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* --- Steps Grid --- */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .step-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border-top: 5px solid var(--accent-gold); /* Gold accent on top */
+            text-align: left;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            background: var(--primary-purple);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(59, 43, 92, 0.3);
+        }
+
+        .step-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+
+        .step-card h3 {
+            color: var(--primary-purple);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        .step-card p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* --- CTA Section at bottom --- */
+        .bottom-cta {
+            text-align: center;
+            background: rgba(245, 176, 39, 0.1);
+            padding: 50px;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+        .bottom-cta h3 {
+            color: var(--primary-purple);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        .bottom-cta p {
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* --- Mobile Adjustments --- */
+        @media (max-width: 800px) {
+            .page-container { padding: 40px 20px; }
+            .hiw-header h2 { font-size: 2.2rem; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .bottom-cta { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation (Updated to include both Ecosystem and How It Works) -->
+    <nav>
+        <a href="index.html" class="logo">IP Botswana <span>Vanguard</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="ecosystem.html">Ecosystem</a>
+            <a href="how-it-works.html" class="active">How It Works</a>
+            <a href="community.html">Community</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- How It Works Content -->
+    <div class="page-container">
+
+        <!-- Header -->
+        <div class="hiw-header">
+            <h2>Start mining in 3 simple steps</h2>
+            <p>We've eliminated the complexity of crypto. Here's exactly how you can join the Vanguard, learn the tech, and start earning safely from your phone today.</p>
+        </div>
+
+        <!-- Step Cards -->
+        <div class="steps-grid">
+            
+            <!-- Step 1 -->
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <!-- IMAGE TO REPLACE: A photo of a mentor teaching, or a welcoming classroom -->
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop" alt="Learn">
+                <h3>📖 1. Learn the Basics</h3>
+                <p>Start your journey in our Learning Hub. We guide you through safe blockchain education, ensuring you understand digital currency before you ever tap a button.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <!-- IMAGE TO REPLACE: A hand holding a phone, tapping the screen -->
+               <img src="https://images.pexels.com/photos/17663/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800" alt="Mobile mining">
+                <h3>⚡ 2. Mine with One Tap</h3>
+                <p>Once you're certified in our app, simply tap "Mine" once a day. It requires very low energy (0.03 kWh/day) and runs perfectly in the background.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <!-- IMAGE TO REPLACE: A photo of people together at a meetup, or an abstract network graphic -->
+                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&h=400&fit=crop" alt="Gather">
+                <h3>🤝 3. Join the Network</h3>
+                <p>Connect with your local hub. Share knowledge, ask questions, and grow alongside 2,400+ other active members building the future of finance in Botswana.</p>
+            </div>
+
+        </div>
+
+        <!-- Bottom Call to Action -->
+        <div class="bottom-cta">
+            <h3>Ready to become a Vanguard?</h3>
+            <p>Download the app, complete your first learning module, and start mining today.</p>
+            <a href="#" class="btn-primary">Start Your Journey Now</a>
+        </div>
+
+    </div>
+
+    <!-- LINK TO EXTERNAL JAVASCRIPT FILE -->
+    <script src="assets/script.js"></script>
+</body>
+</html>

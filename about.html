@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Botswana Vanguard - About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- LINK TO EXTERNAL CSS FILE -->
+    <link rel="stylesheet" href="assets/style.css">
+    
+    <!-- ADDITIONAL CSS SPECIFIC TO THE ABOUT PAGE -->
+    <style>
+        /* --- Page Container --- */
+        .page-container {
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- Header --- */
+        .about-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .about-header h2 {
+            font-size: 3rem;
+            color: var(--primary-purple);
+            margin-bottom: 15px;
+        }
+        .about-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* --- Split Layout --- */
+        .about-split {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        .about-split > * {
+            flex: 1;
+            min-width: 300px;
+        }
+        .about-split h3 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .about-split p {
+            color: #555;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* --- Image Styling --- */
+        .about-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        /* --- Mission/Values Card --- */
+        .mission-card {
+            background: var(--white);
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            margin-top: 20px;
+        }
+        .mission-card h3 {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .values-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            flex-wrap: wrap;
+            color: #444;
+            text-align: center;
+        }
+        .values-grid div {
+            flex: 1;
+            min-width: 150px;
+        }
+        .values-grid strong {
+            display: block;
+            color: var(--primary-purple);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        /* --- Mobile Adjustments --- */
+        @media (max-width: 800px) {
+            .page-container { padding: 40px 20px; }
+            .about-header h2 { font-size: 2.2rem; }
+            .about-split { flex-direction: column-reverse; }
+            .values-grid { flex-direction: column; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">IP Botswana <span>Vanguard</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <!-- Added 'active' class here so it highlights About when on this page -->
+            <a href="about.html" class="active">About</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="community.html">Community</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- About Content -->
+    <div class="page-container">
+
+        <!-- Header -->
+        <div class="about-header">
+            <h2>Building the future of finance in Botswana</h2>
+            <p>We are a community-driven initiative bringing blockchain education and accessible digital mining to everyone, regardless of technical background.</p>
+        </div>
+
+        <!-- Split Layout: Text Left, Image Right -->
+        <div class="about-split">
+            <div>
+                <h3>Our Mission</h3>
+                <p>
+                    To empower the people of Botswana with the knowledge and tools to participate safely in the digital economy. 
+                    We believe that financial technology should be inclusive, easy to understand, and built on a foundation of trust and transparency.
+                </p>
+                <br>
+                <p>
+                    Through our mobile platform, we are lowering the barrier to entry for blockchain technology. 
+                    No complex hardware, no confusing jargon—just a supportive community learning and growing together.
+                </p>
+            </div>
+            <div>
+                <!-- IMAGE TO REPLACE: Put your team, workshop, or classroom photo here -->
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop" 
+                     alt="Our community and mission" 
+                     class="about-img">
+            </div>
+        </div>
+
+        <!-- Core Values Card -->
+        <div class="mission-card">
+            <h3>Our Core Values</h3>
+            <div class="values-grid">
+                <div>
+                    <strong>🌱 Safe Learning</strong>
+                    Education first, always. We ensure every member understands the technology before they start.
+                </div>
+                <div>
+                    <strong>🤝 Respectful Community</strong>
+                    No gatekeeping, just support. We foster an environment where questions are welcomed.
+                </div>
+                <div>
+                    <strong>💎 Built with Integrity</strong>
+                    Transparency is our foundation. We are committed to honest communication and ethical practices.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- LINK TO EXTERNAL JAVASCRIPT FILE -->
+    <script src="assets/script.js"></script>
+</body>
+</html>
