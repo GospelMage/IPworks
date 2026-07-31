@@ -40,6 +40,18 @@ nav {
 .logo span {
     color: var(--accent-gold);
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-logo-badge {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+}
+
 .nav-links {
     display: flex;
     gap: 30px;
