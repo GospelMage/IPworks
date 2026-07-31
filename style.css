@@ -352,6 +352,7 @@ footer {
 }
 
 /* Footer Logo with CSS Diamond */
+ 
 .footer-logo {
     font-weight: 800;
     font-size: 1.5rem;
@@ -365,27 +366,12 @@ footer {
 .footer-logo span.gold {
     color: var(--accent-gold);
 }
-.logo-diamond {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: linear-gradient(135deg, #f5b027 0%, #f5b027 25%, #cba11c 50%, #f5b027 75%, #f5b027 100%);
-    transform: rotate(45deg);
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    position: relative;
+.logo-badge {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
-.logo-diamond::after {
-    content: '';
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    width: 30%;
-    height: 30%;
-    background: rgba(255,255,255,0.6);
-    border-radius: 50%;
-}
-
 /* App Store Buttons */
 .app-buttons {
     display: flex;
