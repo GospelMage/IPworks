@@ -207,13 +207,13 @@ h1 span {
     background-repeat: no-repeat;
     overflow: hidden;
 }
-/* Blur & Overlay */
+/* Lighter overlay so the generated image reads clearly, phone mockup still pops */
 .hero-visual::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(245, 243, 249, 0.7);
-    backdrop-filter: blur(4px);
+    background: rgba(245, 243, 249, 0.25);
+    backdrop-filter: blur(1px);
     border-radius: 30px;
 }
 
