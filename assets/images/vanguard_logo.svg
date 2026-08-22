@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldLinear" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5DE88"/>
+      <stop offset="30%" stop-color="#D4AF37"/>
+      <stop offset="70%" stop-color="#B8860B"/>
+      <stop offset="100%" stop-color="#E5C358"/>
+    </linearGradient>
+
+    <linearGradient id="goldBevel" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8A6414"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#FFF3C4"/>
+    </linearGradient>
+
+    <linearGradient id="bwCircuit" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00CBFF"/>
+      <stop offset="40%" stop-color="#5BA8DE"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#5BA8DE"/>
+    </linearGradient>
+
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Outer Geometric V Chevron -->
+  <polygon points="50,90 250,460 450,90 350,90 250,300 150,90" fill="url(#goldBevel)" filter="url(#goldGlow)" opacity="0.95"/>
+  <polygon points="50,90 250,460 450,90 350,90 250,300 150,90" fill="none" stroke="url(#goldLinear)" stroke-width="4"/>
+
+  <!-- Inner Dynamic Circuit Lines (Botswana Blue & White Accents) -->
+  <path d="M120,130 L180,240 L210,240" fill="none" stroke="#5BA8DE" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="120" cy="130" r="5" fill="#5BA8DE"/>
+  <circle cx="210" cy="240" r="5" fill="#FFFFFF"/>
+
+  <path d="M155,120 L195,200" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="155" cy="120" r="4" fill="#FFFFFF"/>
+
+  <path d="M380,130 L320,240 L290,240" fill="none" stroke="#5BA8DE" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="380" cy="130" r="5" fill="#5BA8DE"/>
+  <circle cx="290" cy="240" r="5" fill="#FFFFFF"/>
+
+  <path d="M345,120 L305,200" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="345" cy="120" r="4" fill="#FFFFFF"/>
+
+  <!-- Central Pi Symbol (π) Bold Sculpted 3D Gold -->
+  <path d="M165,160 Q250,150 335,160 L345,185 Q250,175 155,185 Z" fill="url(#goldLinear)" stroke="#8A6414" stroke-width="2"/>
+  <path d="M185,180 Q195,250 170,295 L205,305 Q225,250 215,180 Z" fill="url(#goldBevel)" stroke="#8A6414" stroke-width="2"/>
+  <path d="M285,180 Q290,245 295,290 L330,290 Q325,245 315,180 Z" fill="url(#goldBevel)" stroke="#8A6414" stroke-width="2"/>
+
+  <!-- Botswana Central Anchor Node -->
+  <circle cx="250" cy="380" r="8" fill="#5BA8DE" stroke="#FFFFFF" stroke-width="2"/>
+  <path d="M250,330 L250,370" stroke="url(#goldLinear)" stroke-width="4" stroke-linecap="round"/>
+</svg>
