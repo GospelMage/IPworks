@@ -1,159 +1,281 @@
 /* ==========================================================================
-   Header & Navigation — Redesigned (Dark Glass, Gold/White Text, 40px Spacing)
+   IP BOTSWANA VANGUARD — DESIGN SYSTEM & STYLESHEET
+   Aesthetic: High-End Corporate Fintech, Light & Airy, Royal Purple & Gold
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@500;600;700;800;900&display=swap');
+
+:root {
+  /* --- Primary Color Palette --- */
+  --bg-main: #FAF8F5;            /* Warm off-white / light cream */
+  --bg-surface: #FFFFFF;         /* Pure crisp white for cards */
+  --bg-surface-alt: #F4EFEA;     /* Soft ivory stone */
+  --bg-purple-subtle: #F6F2FA;   /* Very light royal purple tint */
+  --bg-gold-subtle: #FDF9EE;     /* Very light champagne gold tint */
+  
+  /* --- Royal Purple Accents --- */
+  --purple-950: #140A21;         /* Deepest obsidian purple */
+  --purple-900: #1F1030;         /* Dark imperial purple */
+  --purple-800: #2E1847;         /* Deep imperial purple */
+  --purple-700: #4A2C6D;         /* Primary brand purple */
+  --purple-600: #5D3B87;         /* Medium royal purple */
+  --purple-500: #6B4C8A;         /* Vanguard violet */
+  --purple-400: #8E6EB3;         /* Soft purple */
+  --purple-100: #EFE9F6;         /* Light purple border/bg */
+
+  /* --- Gold Luxury Accents --- */
+  --gold-800: #8A6414;           /* Deep bronze gold */
+  --gold-700: #A87B18;           /* Burnished gold */
+  --gold-600: #B8860B;           /* Dark goldenrod */
+  --gold-500: #D4AF37;           /* Primary metallic gold */
+  --gold-400: #E5C358;           /* Radiant champagne gold */
+  --gold-300: #F3DC8E;           /* Soft pastel gold */
+  --gold-100: #FAF2D8;           /* Pale gold badge background */
+  --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F5DE88 50%, #B8860B 100%);
+  --gold-gradient-soft: linear-gradient(135deg, rgba(212,175,55,0.15) 0%, rgba(245,222,136,0.25) 50%, rgba(184,134,11,0.15) 100%);
+  --purple-gradient: linear-gradient(135deg, #4A2C6D 0%, #2E1847 100%);
+  --purple-gold-gradient: linear-gradient(135deg, #4A2C6D 0%, #351C52 60%, #B8860B 100%);
+
+  /* --- Botswana National Colors --- */
+  --bw-blue: #00CBFF;
+  --bw-blue-muted: #5BA8DE;
+  --bw-blue-soft: rgba(91, 168, 222, 0.12);
+  --bw-black: #1A1A1A;
+  --bw-white: #FFFFFF;
+
+  /* --- Typography & Text --- */
+  --text-primary: #181424;       /* Deep obsidian text */
+  --text-secondary: #585366;     /* Slate subtitle text */
+  --text-muted: #888299;         /* Muted meta text */
+  --text-light: #FBF9F5;         /* Inverted text */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Cinzel', Georgia, serif;
+
+  /* --- Shadows & Borders --- */
+  --border-subtle: rgba(74, 44, 109, 0.08);
+  --border-gold: rgba(212, 175, 55, 0.35);
+  --border-gold-strong: rgba(212, 175, 55, 0.7);
+  --shadow-sm: 0 2px 8px rgba(31, 16, 48, 0.04);
+  --shadow-md: 0 8px 24px -4px rgba(31, 16, 48, 0.06), 0 2px 6px rgba(0,0,0,0.02);
+  --shadow-lg: 0 16px 40px -8px rgba(31, 16, 48, 0.09), 0 4px 12px rgba(212, 175, 55, 0.08);
+  --shadow-gold-glow: 0 0 25px rgba(212, 175, 55, 0.25);
+  --shadow-purple-glow: 0 8px 30px rgba(74, 44, 109, 0.25);
+
+  /* --- Radius --- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 9999px;
+
+  /* --- Layout --- */
+  --max-width: 1240px;
+  --header-height: 84px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.65;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: 
+    radial-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(74, 44, 109, 0.03) 1px, transparent 1px);
+  background-size: 44px 44px;
+  background-position: 0 0, 22px 22px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--purple-900);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* ==========================================================================
+   Header & Navigation (Clean Text Brand, No Image Logo)
    ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(10, 10, 20, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(251, 249, 245, 0.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
   transition: all 0.3s ease;
 }
 
 .site-header.scrolled {
-  background: rgba(8, 8, 16, 0.95);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 20px rgba(31, 16, 48, 0.06);
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: var(--header-height);
 }
 
-/* Text-Only Brand Element */
-.brand-name {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  display: inline-flex;
+.brand-logo {
+  display: flex;
   align-items: center;
-  gap: 6px;
+  text-decoration: none;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-family: 'Montserrat', var(--font-display), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--purple-900);
+}
+
+.logo-title span {
+  color: var(--gold-600);
+}
+
+.logo-tagline {
+  font-size: 0.68rem;
   text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  font-weight: 600;
 }
 
-.brand-name .brand-gold {
-  color: #D4AF37;
-  font-weight: 900;
-}
-
-.brand-name .brand-light {
-  color: #FFFFFF;
-  font-weight: 700;
-}
-
-/* Central Navigation Links */
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 28px;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-link {
-  font-family: 'Poppins', 'Montserrat', sans-serif;
-  font-size: 0.94rem;
+  font-size: 0.92rem;
   font-weight: 500;
-  color: #FFFFFF;
+  color: var(--text-secondary);
   position: relative;
   padding: 6px 0;
-  transition: color 0.25s ease;
-  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .nav-link:hover, .nav-link.active {
-  color: #D4AF37 !important;
+  color: var(--purple-700);
   font-weight: 600;
 }
 
 .nav-link.active::after, .nav-link:hover::after {
   content: '';
   position: absolute;
-  bottom: -2px;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 2px;
-  background: #D4AF37;
+  background: var(--gold-gradient);
   border-radius: 2px;
 }
 
-/* Header Actions */
 .header-actions {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-/* Pi Network Ecosystem Partner Badge in Navbar */
-.nav-pi-badge {
+.status-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   padding: 6px 14px;
-  border-radius: 50px;
-  background: rgba(212, 175, 55, 0.15);
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  font-size: 0.76rem;
-  font-weight: 700;
-  color: #D4AF37;
-  letter-spacing: 0.03em;
-  font-family: 'Poppins', sans-serif;
-  white-space: nowrap;
+  border-radius: var(--radius-full);
+  background: rgba(46, 204, 113, 0.1);
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1e824c;
 }
 
-.nav-pi-badge span.pi-icon {
-  font-family: serif;
-  font-weight: 900;
-  font-size: 0.95rem;
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #27ae60;
+  box-shadow: 0 0 8px #2ecc71;
+  animation: pulse-green 2s infinite ease-in-out;
 }
 
-/* Launch App Button */
-.btn-launch-app {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 24px;
-  background-color: #D4AF37;
-  color: #000000 !important;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 800;
-  border-radius: 50px;
-  text-decoration: none;
-  border: none;
-  transition: all 0.25s ease;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
-  white-space: nowrap;
-}
-
-.btn-launch-app:hover {
-  background-color: #E5C358;
-  color: #000000 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.55);
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
 }
 
 .mobile-toggle {
   display: none;
   background: none;
   border: none;
-  font-size: 1.8rem;
-  color: #D4AF37;
+  font-size: 1.5rem;
+  color: var(--purple-800);
   cursor: pointer;
-  padding: 4px;
 }
 
-
-/* ==========================================================================
-   Buttons & UI Elements
-   ========================================================================== */
+/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -224,17 +346,6 @@
   border-color: var(--gold-600);
 }
 
-.btn-outline {
-  background: transparent;
-  color: var(--purple-800);
-  border: 1px solid rgba(74, 44, 109, 0.2);
-}
-
-.btn-outline:hover {
-  background: rgba(74, 44, 109, 0.05);
-  border-color: var(--purple-600);
-}
-
 .btn-sm {
   padding: 8px 16px;
   font-size: 0.85rem;
@@ -295,52 +406,15 @@
   color: var(--purple-900);
 }
 
-/* Hero Section */
+/* ==========================================================================
+   Hero Section: 2-Column Luxury Layout with Botswana Flag & Pi Coin Visual
+   ========================================================================== */
 .hero-section {
-    background-image: url('https://raw.githubusercontent.com/GospelMage/IPworks/main/assets/images/pi_botswana_hero.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
+  position: relative;
+  padding: 70px 0 90px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(250, 248, 245, 0.8) 0%, rgba(244, 239, 234, 0.9) 100%);
 }
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(20, 10, 33, 0.65) 0%, rgba(31, 16, 48, 0.75) 100%);
-    pointer-events: none;
-}
-
-.hero-content-center {
-    position: relative;
-    z-index: 2;
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.hero-section .hero-title {
-    color: #FFFFFF;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-}
-
-.hero-section .hero-subtitle {
-    color: #F0EAF8;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    margin-left: auto;
-    margin-right: auto;
-}
-
 
 .hero-section::before {
   content: '';
@@ -368,14 +442,21 @@
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.95fr;
-  gap: 50px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
   align-items: center;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
+}
+
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
 }
 
 .hero-title {
@@ -449,7 +530,7 @@
   letter-spacing: 0.04em;
 }
 
-/* Phone Mockup Frame */
+/* Hero Right Visual: Pi Network & Botswana Flag Showcase Card */
 .hero-visual {
   position: relative;
   display: flex;
@@ -457,202 +538,28 @@
   align-items: center;
 }
 
-.mockup-container {
-  position: relative;
-  width: 100%;
-  max-width: 420px;
-}
-
-.mockup-backdrop-card {
-  position: absolute;
-  inset: -15px;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(74, 44, 109, 0.1) 100%);
-  border-radius: 40px;
-  filter: blur(24px);
-  z-index: 1;
-}
-
-.phone-mockup-frame {
+.hero-image-card {
   position: relative;
   z-index: 2;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px -10px rgba(31, 16, 48, 0.35), 0 0 0 2px var(--gold-500);
   background: #140A24;
-  border-radius: 40px;
-  padding: 12px;
-  box-shadow: 0 25px 60px -10px rgba(31, 16, 48, 0.4), 0 0 0 2px rgba(212, 175, 55, 0.5);
-  border: 4px solid #362052;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.phone-screen {
-  background: #190F2C;
-  border-radius: 30px;
-  overflow: hidden;
-  color: #FFFFFF;
-  font-size: 0.85rem;
+.hero-image-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 70px -10px rgba(31, 16, 48, 0.45), var(--shadow-gold-glow);
 }
 
-.phone-status-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 18px 6px;
-  font-size: 0.72rem;
-  color: #BBB;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.phone-app-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 18px;
-  background: rgba(74, 44, 109, 0.45);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-}
-
-.phone-app-brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.88rem;
-  color: #FFF;
-}
-
-.phone-app-brand span {
-  color: var(--gold-400);
-}
-
-.phone-node-status {
-  background: rgba(39, 174, 96, 0.2);
-  color: #2ecc71;
-  border: 1px solid rgba(46, 204, 113, 0.4);
-  padding: 2px 8px;
-  border-radius: 12px;
-  font-size: 0.68rem;
-  font-weight: 600;
-}
-
-.phone-body {
-  padding: 16px;
-}
-
-.phone-mining-card {
-  background: linear-gradient(135deg, rgba(74, 44, 109, 0.7) 0%, rgba(31, 16, 48, 0.9) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.45);
-  border-radius: 18px;
-  padding: 16px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 14px;
-}
-
-.mining-gauge-wrap {
-  width: 84px;
-  height: 84px;
-  margin: 0 auto 10px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.35);
-  border: 2px solid var(--gold-500);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-  animation: pulse-ring 3s infinite ease-in-out;
-}
-
-@keyframes pulse-ring {
-  0%, 100% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
-  50% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.55); }
-}
-
-.mining-symbol {
-  font-size: 1.3rem;
-  color: var(--gold-400);
-  font-family: var(--font-display);
-}
-
-.mining-status-text {
-  font-size: 0.62rem;
-  color: #2ecc71;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-}
-
-.phone-balance-val {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  margin-bottom: 2px;
-  font-family: var(--font-display);
-}
-
-.phone-balance-val span {
-  color: var(--gold-400);
-  font-size: 0.85rem;
-}
-
-.phone-energy-row {
-  display: flex;
-  justify-content: space-between;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 8px 12px;
-  border-radius: 10px;
-  font-size: 0.72rem;
-  margin-top: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.phone-energy-row .energy-val {
-  color: #2ecc71;
-  font-weight: 700;
-}
-
-.phone-grid-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-bottom: 14px;
-}
-
-.phone-mini-stat {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 10px;
-}
-
-.phone-mini-stat .p-label {
-  font-size: 0.65rem;
-  color: #AAA;
+.hero-image-card img {
+  width: 100%;
+  height: auto;
   display: block;
+  object-fit: cover;
 }
 
-.phone-mini-stat .p-val {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #FFF;
-}
-
-.phone-pi-badge {
-  background: rgba(212, 175, 55, 0.15);
-  border: 1px solid var(--gold-500);
-  border-radius: 12px;
-  padding: 8px 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.75rem;
-}
-
-.phone-pi-badge strong {
-  color: var(--gold-300);
-}
-
-/* Floating Badges */
 .floating-hero-badge {
   position: absolute;
   z-index: 3;
@@ -669,14 +576,14 @@
 }
 
 .floating-hero-badge.top-right {
-  top: 15px;
-  right: -25px;
+  top: -15px;
+  right: -20px;
   animation-delay: 0s;
 }
 
 .floating-hero-badge.bottom-left {
-  bottom: 25px;
-  left: -35px;
+  bottom: -15px;
+  left: -20px;
   animation-delay: 2s;
 }
 
@@ -713,7 +620,7 @@
   color: var(--text-muted);
 }
 
-/* Sections */
+/* Sections Shared Styling */
 .section {
   padding: 95px 0;
   position: relative;
@@ -766,18 +673,10 @@
   margin-bottom: 16px;
 }
 
-.section-bg-purple-dark .section-title {
-  color: #FFFFFF;
-}
-
 .section-desc {
   font-size: 1.08rem;
   color: var(--text-secondary);
   line-height: 1.7;
-}
-
-.section-bg-purple-dark .section-desc {
-  color: #CFC8DD;
 }
 
 /* Feature Grid */
@@ -879,7 +778,7 @@
   font-weight: 800;
 }
 
-/* Pi Integration Section */
+/* Pi Network Integration Section */
 .pi-integration-section {
   background: linear-gradient(180deg, #FFFFFF 0%, #FAF6EE 100%);
   border-top: 1px solid rgba(212, 175, 55, 0.2);
@@ -1134,74 +1033,6 @@
   height: 8px;
   border-radius: 50%;
   background: var(--gold-400);
-}
-
-/* Showcase Grid */
-.showcase-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.showcase-card {
-  background: #FFFFFF;
-  border: 1px solid var(--border-gold);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  transition: all 0.3s ease;
-}
-
-.showcase-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-}
-
-.showcase-img-wrap {
-  position: relative;
-  height: 250px;
-  overflow: hidden;
-  background: var(--purple-900);
-}
-
-.showcase-img-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.showcase-card:hover .showcase-img-wrap img {
-  transform: scale(1.04);
-}
-
-.showcase-body {
-  padding: 26px 28px;
-}
-
-.showcase-badge {
-  display: inline-block;
-  background: var(--gold-100);
-  color: var(--gold-800);
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 6px;
-  margin-bottom: 12px;
-}
-
-.showcase-body h4 {
-  font-size: 1.3rem;
-  color: var(--purple-900);
-  margin-bottom: 8px;
-}
-
-.showcase-body p {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
 }
 
 /* Benchmark Table */
@@ -1605,7 +1436,7 @@
   .hero-metric-item:nth-child(2) {
     border-right: none;
   }
-  .feature-cards-grid, .pi-features-grid, .showcase-grid {
+  .feature-cards-grid, .pi-features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .pi-banner-grid, .download-box-card {
@@ -1614,41 +1445,6 @@
   }
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 992px) {
-  .nav-menu {
-    gap: 20px;
-  }
-}
-
-@media (max-width: 860px) {
-  .mobile-toggle {
-    display: block;
-  }
-  .nav-menu {
-    display: none;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background: rgba(10, 10, 20, 0.98);
-    backdrop-filter: blur(12px);
-    flex-direction: column;
-    padding: 30px 24px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-    border-bottom: 2px solid #D4AF37;
-    gap: 20px;
-  }
-  .nav-menu.open {
-    display: flex;
-  }
-  .nav-pi-badge {
-    display: none;
-  }
-  .btn-launch-app {
-    display: none;
   }
 }
 
@@ -1684,7 +1480,7 @@
   .section-title {
     font-size: 1.95rem;
   }
-  .feature-cards-grid, .pi-features-grid, .showcase-grid {
+  .feature-cards-grid, .pi-features-grid {
     grid-template-columns: 1fr;
   }
   .hero-metrics {
